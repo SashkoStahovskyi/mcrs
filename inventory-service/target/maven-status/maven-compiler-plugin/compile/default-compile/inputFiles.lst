@@ -1,0 +1,8 @@
+C:\Projects\microservices-new\inventory-service\src\main\java\com\stakhovskyi\inventoryservice\InventoryServiceApplication.java
+C:\Projects\microservices-new\inventory-service\src\main\java\com\stakhovskyi\inventoryservice\controller\InventoryController.java
+C:\Projects\microservices-new\inventory-service\src\main\java\com\stakhovskyi\inventoryservice\module\Inventory.java
+C:\Projects\microservices-new\inventory-service\src\main\java\com\stakhovskyi\inventoryservice\service\InventoryService.java
+C:\Projects\microservices-new\inventory-service\target\generated-sources\protobuf\java\com\stakhovskyi\grpc\Inventory.java
+C:\Projects\microservices-new\inventory-service\target\generated-sources\protobuf\grpc-java\com\stakhovskyi\grpc\InventoryServiceGrpc.java
+C:\Projects\microservices-new\inventory-service\src\main\java\com\stakhovskyi\inventoryservice\repository\InventoryRepository.java
+C:\Projects\microservices-new\inventory-service\src\main\java\com\stakhovskyi\inventoryservice\server\GRPCServer.java
