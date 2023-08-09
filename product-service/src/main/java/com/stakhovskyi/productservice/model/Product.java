@@ -5,10 +5,9 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(value = "Products")
+@Document(value = "product_service_db")
 @Data
 @Builder
 @AllArgsConstructor
@@ -17,13 +16,12 @@ public class Product {
 
     @Id
     private String id;
-
-    //@Indexed(unique = true)
     private String name;
-
     private String description;
-
+    private int quantity;
     private Double price;
 
 
 }
+
+

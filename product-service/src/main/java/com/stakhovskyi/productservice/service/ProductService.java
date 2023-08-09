@@ -10,7 +10,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Slf4j
 @Service
@@ -19,23 +18,26 @@ public class ProductService {
 
     private final ProductRepository productRepository;
 
+    private final ProducerMassageService producerMassageService;
+
+
     public void createProduct(ProductRequest productRequest) {
 
         Product product = Product.builder()
                 .name(productRequest.getName())
                 .description(productRequest.getDescription())
+                .quantity(productRequest.getQuantity())
                 .price(productRequest.getPrice())
                 .build();
 
         productRepository.save(product);
-        log.info(" save product {} to db ", product);
+        producerMassageService.sendMessage("Product" + product.getName() + " was created! ");
 
     }
 
-    @Transactional(readOnly = true)
     public List<ProductRespone> getProducts() {
 
-       return productRepository.findAll().stream()
+        return productRepository.findAll().stream()
                 .map(this::mapToProductRespone)
                 .toList();
     }
@@ -49,7 +51,6 @@ public class ProductService {
                 .price(product.getPrice())
                 .build();
     }
-
 
 
 }
