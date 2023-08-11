@@ -1,13 +1,14 @@
 package com.stakhovskyi.productservice.service;
 
-import com.stakhovskyi.productservice.dto.ProductRequest;
-import com.stakhovskyi.productservice.dto.ProductRespone;
+import com.stakhovskyi.productservice.dto.ProductDto;
+import com.stakhovskyi.productservice.ivent.ProductEvent;
+import com.stakhovskyi.productservice.massageservice.ProductMassageService;
 import com.stakhovskyi.productservice.model.Product;
 import com.stakhovskyi.productservice.repository.ProductRepository;
+import com.stakhovskyi.productservice.utils.ProductMapper;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -18,39 +19,52 @@ public class ProductService {
 
     private final ProductRepository productRepository;
 
-    private final ProducerMassageService producerMassageService;
+    private final ProductMassageService massageService;
 
 
-    public void createProduct(ProductRequest productRequest) {
+    public void createProduct(ProductDto productDto) {
+        Product product = productRepository.save(ProductMapper.toProduct(productDto));
 
-        Product product = Product.builder()
-                .name(productRequest.getName())
-                .description(productRequest.getDescription())
-                .quantity(productRequest.getQuantity())
-                .price(productRequest.getPrice())
+        ProductEvent productEvent = ProductEvent.builder()
+                .id(product.getId())
+                .name(product.getName())
+                .quantity(product.getQuantity())
                 .build();
 
-        productRepository.save(product);
-        producerMassageService.sendMessage("Product" + product.getName() + " was created! ");
-
+        massageService.createProductMassage(productEvent);
     }
 
-    public List<ProductRespone> getProducts() {
-
+    public List<ProductDto> getProducts() {
         return productRepository.findAll().stream()
-                .map(this::mapToProductRespone)
+                .map(ProductMapper::toProductDto)
                 .toList();
     }
 
-    private ProductRespone mapToProductRespone(Product product) {
+    public ProductDto updateProduct(ProductDto productDto, String id) {
+        ProductDto resultProductDto = productRepository.findById(id)
+                .map(p -> ProductMapper.updateProduct(p, productDto))
+                .map(productRepository::save)
+                .map(ProductMapper::toProductDto)
+                .orElseThrow(() -> new RuntimeException(" Product with id: " + id + " not exist in db!"));
 
-        return ProductRespone.builder()
-                .id(product.getId())
-                .name(product.getName())
-                .description(product.getDescription())
-                .price(product.getPrice())
-                .build();
+        massageService.updateProductMassage(ProductEvent.builder()
+                .id(id)
+                .name(productDto.getName())
+                .quantity(productDto.getQuantity())
+                .build());
+        return resultProductDto;
     }
 
+    public void deleteProduct(String id) {
+        productRepository.deleteById(id);
+        massageService.deleteProductMassage(ProductEvent.builder()
+                .id(id)
+                .build());
+    }
 
+    public ProductDto getProductById(String id) {
+        return productRepository.findById(id)
+                .map(ProductMapper::toProductDto)
+                .orElseThrow(() -> new RuntimeException(" Product with id: " + id + " not exist in db!"));
+    }
 }

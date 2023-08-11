@@ -14,8 +14,6 @@ import org.springframework.transaction.annotation.Transactional;
 public class InventoryService {
     private final InventoryRepository inventoryRepository;
 
-    private final MassageListenerService massageListenerService;
-
     @Transactional(readOnly = true)
     public boolean isInStock(String skuCode) {
 
