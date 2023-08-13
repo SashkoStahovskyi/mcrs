@@ -1,3 +1,4 @@
+/*
 package com.stakhovskyi.inventoryservice.server;
 
 import com.stakhovskyi.grpc.Inventory;
@@ -63,3 +64,4 @@ public class GRPCServer {
 }
 
 
+*/

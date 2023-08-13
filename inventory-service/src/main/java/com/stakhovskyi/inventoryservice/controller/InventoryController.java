@@ -18,10 +18,10 @@ public class InventoryController {
     private final InventoryService inventoryService;
 
 
-    @GetMapping("/{sku-code}")
+    @GetMapping("/{productName}")
     @ResponseStatus(HttpStatus.OK)
-    protected boolean isInStock(@PathVariable("sku-code") String skuCode) {
-        return inventoryService.isInStock(skuCode);
+    protected boolean isInStock(@PathVariable("productName") String productName) {
+        return inventoryService.isInStock(productName);
     }
 
 }
