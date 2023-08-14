@@ -1,8 +1,8 @@
 C:\Projects\microservices-new\order-service\src\main\java\com\example\orderservice\service\OrderService.java
 C:\Projects\microservices-new\order-service\src\main\java\com\example\orderservice\controller\OrderController.java
 C:\Projects\microservices-new\order-service\src\main\java\com\example\orderservice\entity\Order.java
+C:\Projects\microservices-new\order-service\src\main\java\com\example\orderservice\clientservice\GRPCClient.java
 C:\Projects\microservices-new\order-service\target\generated-sources\protobuf\grpc-java\com\stakhovskyi\grpc\InventoryServiceGrpc.java
-C:\Projects\microservices-new\order-service\src\main\java\com\example\orderservice\clientservice\GRPCClientService.java
 C:\Projects\microservices-new\order-service\src\main\java\com\example\orderservice\OrderServiceApplication.java
 C:\Projects\microservices-new\order-service\src\main\java\com\example\orderservice\repository\OrderRepository.java
 C:\Projects\microservices-new\order-service\target\generated-sources\protobuf\java\com\stakhovskyi\grpc\Order.java

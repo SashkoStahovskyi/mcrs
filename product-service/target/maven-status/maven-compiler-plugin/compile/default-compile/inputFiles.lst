@@ -1,9 +1,11 @@
-C:\Projects\microservices-new\product-service\src\main\java\com\stakhovskyi\productservice\dto\ProductRequest.java
+C:\Projects\microservices-new\product-service\src\main\java\com\stakhovskyi\productservice\dto\ProductDto.java
 C:\Projects\microservices-new\product-service\src\main\java\com\stakhovskyi\productservice\service\ProductService.java
-C:\Projects\microservices-new\product-service\src\main\java\com\stakhovskyi\productservice\model\Score.java
-C:\Projects\microservices-new\product-service\src\main\java\com\stakhovskyi\productservice\model\Grade.java
+C:\Projects\microservices-new\product-service\src\main\java\com\stakhovskyi\productservice\config\KafkaProducerConfig.java
 C:\Projects\microservices-new\product-service\src\main\java\com\stakhovskyi\productservice\ProductServiceApplication.java
 C:\Projects\microservices-new\product-service\src\main\java\com\stakhovskyi\productservice\repository\ProductRepository.java
-C:\Projects\microservices-new\product-service\src\main\java\com\stakhovskyi\productservice\dto\ProductRespone.java
+C:\Projects\microservices-new\product-service\src\main\java\com\stakhovskyi\productservice\ivent\ProductEvent.java
 C:\Projects\microservices-new\product-service\src\main\java\com\stakhovskyi\productservice\controller\ProductController.java
+C:\Projects\microservices-new\product-service\src\main\java\com\stakhovskyi\productservice\massageservice\MassageService.java
+C:\Projects\microservices-new\product-service\src\main\java\com\stakhovskyi\productservice\utils\ProductMapper.java
+C:\Projects\microservices-new\product-service\src\main\java\com\stakhovskyi\productservice\massageservice\ProductMassageService.java
 C:\Projects\microservices-new\product-service\src\main\java\com\stakhovskyi\productservice\model\Product.java
