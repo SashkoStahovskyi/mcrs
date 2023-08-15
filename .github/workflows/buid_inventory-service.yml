@@ -1,0 +1,29 @@
+name: Test and Build Inventory-Service
+
+on: 
+  push:
+      branches: 
+      - main
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: step 1 -> Checkout main from Git_Hub
+              uses: actions/checkout@v3
+              
+            - name: step 2 -> Set up JDK 17
+              uses: actions/setup-java@v3
+              with:
+                java-version: '17'
+                distribution: 'adopt'
+
+            - name: step 3 -> Build Maven Project
+              run: mvn clean install inventory-service
+              
+            - name: step 4 -> Check Target Folder
+              run: |
+                  cd target
+                  ls -a    
+            
