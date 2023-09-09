@@ -1,12 +1,11 @@
 C:\Projects\microservices-new\order-service\src\main\java\com\example\orderservice\service\OrderService.java
+C:\Projects\microservices-new\order-service\src\main\java\com\example\orderservice\serviceclient\InventoryServiceClient.java
 C:\Projects\microservices-new\order-service\src\main\java\com\example\orderservice\controller\OrderController.java
+C:\Projects\microservices-new\order-service\src\main\java\com\example\orderservice\config\WebClientConfig.java
 C:\Projects\microservices-new\order-service\src\main\java\com\example\orderservice\entity\Order.java
-C:\Projects\microservices-new\order-service\src\main\java\com\example\orderservice\clientservice\GRPCClient.java
-C:\Projects\microservices-new\order-service\target\generated-sources\protobuf\grpc-java\com\stakhovskyi\grpc\InventoryServiceGrpc.java
+C:\Projects\microservices-new\order-service\src\main\java\com\example\orderservice\serviceclient\ServiceClient.java
 C:\Projects\microservices-new\order-service\src\main\java\com\example\orderservice\OrderServiceApplication.java
 C:\Projects\microservices-new\order-service\src\main\java\com\example\orderservice\repository\OrderRepository.java
-C:\Projects\microservices-new\order-service\target\generated-sources\protobuf\java\com\stakhovskyi\grpc\Order.java
 C:\Projects\microservices-new\order-service\src\main\java\com\example\orderservice\dto\OrderRequest.java
 C:\Projects\microservices-new\order-service\src\main\java\com\example\orderservice\model\OrderLineItems.java
-C:\Projects\microservices-new\order-service\src\main\java\com\example\orderservice\config\GRPCClientConfig.java
 C:\Projects\microservices-new\order-service\src\main\java\com\example\orderservice\dto\OrderLineItemsDto.java

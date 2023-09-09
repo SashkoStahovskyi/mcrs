@@ -16,14 +16,13 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "t_order_line_items")
+@Table(name = "order_line_items")
 public class OrderLineItems {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "sku_code")
     private String skuCode;
 
     private Double price;

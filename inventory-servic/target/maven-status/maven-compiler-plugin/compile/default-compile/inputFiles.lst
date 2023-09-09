@@ -1,0 +1,11 @@
+C:\Projects\microservices-new\inventory-servic\src\main\java\com\stakhovskyi\inventoryservice\InventoryServiceApplication.java
+C:\Projects\microservices-new\inventory-servic\src\main\java\com\stakhovskyi\inventoryservice\controller\InventoryController.java
+C:\Projects\microservices-new\inventory-servic\src\main\java\com\stakhovskyi\inventoryservice\service\InventoryService.java
+C:\Projects\microservices-new\inventory-servic\src\main\java\com\stakhovskyi\inventoryservice\repository\InventoryRepository.java
+C:\Projects\microservices-new\inventory-servic\src\main\java\com\stakhovskyi\inventoryservice\config\KafkaConsumerConfig.java
+C:\Projects\microservices-new\inventory-servic\src\main\java\com\stakhovskyi\inventoryservice\maassageservice\MassageService.java
+C:\Projects\microservices-new\inventory-servic\src\main\java\com\stakhovskyi\inventoryservice\maassageservice\MassageHandler.java
+C:\Projects\microservices-new\inventory-servic\src\main\java\com\stakhovskyi\inventoryservice\dto\InventoryResponse.java
+C:\Projects\microservices-new\inventory-servic\src\main\java\com\stakhovskyi\inventoryservice\entity\Product.java
+C:\Projects\microservices-new\inventory-servic\src\main\java\com\stakhovskyi\inventoryservice\utils\AppUtils.java
+C:\Projects\microservices-new\inventory-servic\src\main\java\com\stakhovskyi\inventoryservice\ivent\ProductEvent.java

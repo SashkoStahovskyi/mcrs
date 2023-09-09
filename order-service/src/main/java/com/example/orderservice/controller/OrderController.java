@@ -2,6 +2,8 @@ package com.example.orderservice.controller;
 
 import com.example.orderservice.dto.OrderRequest;
 import com.example.orderservice.service.OrderService;
+import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
+import io.github.resilience4j.timelimiter.annotation.TimeLimiter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -21,12 +23,14 @@ public class OrderController {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
+   // @TimeLimiter(name = "inventory",fallbackMethod = "fallback")
+    @CircuitBreaker(name = "inventory", fallbackMethod = "fallback")
     protected String placeOrder(@RequestBody OrderRequest orderRequest) {
-
-        if (orderService.placeOrder(orderRequest)){
-            return " Order placed successfully !";
-        }
-        return " Order not in stock ! ";
+        orderService.placeOrder(orderRequest);
+        return " Order placed successfully !";
     }
 
+    public String fallback(OrderRequest orderRequest, RuntimeException exception) {
+        return "Fallback method from circuit breaker";
+    }
 }

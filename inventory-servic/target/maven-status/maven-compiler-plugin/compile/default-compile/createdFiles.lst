@@ -1,0 +1,15 @@
+com\stakhovskyi\inventoryservice\service\InventoryService$InventoryServiceBuilder.class
+com\stakhovskyi\inventoryservice\maassageservice\MassageService.class
+com\stakhovskyi\inventoryservice\dto\InventoryResponse$InventoryResponseBuilder.class
+com\stakhovskyi\inventoryservice\entity\Product.class
+com\stakhovskyi\inventoryservice\entity\Product$ProductBuilder.class
+com\stakhovskyi\inventoryservice\service\InventoryService.class
+com\stakhovskyi\inventoryservice\controller\InventoryController.class
+com\stakhovskyi\inventoryservice\maassageservice\MassageHandler.class
+com\stakhovskyi\inventoryservice\repository\InventoryRepository.class
+com\stakhovskyi\inventoryservice\InventoryServiceApplication.class
+com\stakhovskyi\inventoryservice\ivent\ProductEvent.class
+com\stakhovskyi\inventoryservice\dto\InventoryResponse.class
+com\stakhovskyi\inventoryservice\config\KafkaConsumerConfig.class
+com\stakhovskyi\inventoryservice\ivent\ProductEvent$ProductEventBuilder.class
+com\stakhovskyi\inventoryservice\utils\AppUtils.class

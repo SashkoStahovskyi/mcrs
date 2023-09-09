@@ -1,18 +1,18 @@
 package com.example.orderservice.service;
 
+import com.example.orderservice.dto.InventoryResponse;
 import com.example.orderservice.dto.OrderLineItemsDto;
 import com.example.orderservice.dto.OrderRequest;
 import com.example.orderservice.entity.Order;
 import com.example.orderservice.model.OrderLineItems;
 import com.example.orderservice.repository.OrderRepository;
-import com.stakhovskyi.grpc.InventoryServiceGrpc;
-import io.grpc.Channel;
-import io.grpc.ManagedChannel;
-import io.grpc.ManagedChannelBuilder;
+import com.example.orderservice.serviceclient.ServiceClient;
+import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.UUID;
 
@@ -25,9 +25,9 @@ public class OrderService {
 
     private final OrderRepository orderRepository;
 
-   // private final InventoryServiceGrpc.InventoryServiceBlockingStub stub;
+    private final ServiceClient inventoryServiceClient;
 
-    public boolean placeOrder(OrderRequest orderRequest) {
+    public String placeOrder(OrderRequest orderRequest) {
         Order order = new Order();
         order.setOrderNumber((UUID.randomUUID().toString()));
 
@@ -38,29 +38,19 @@ public class OrderService {
 
         order.setOrderLineItems(orderLineItems);
 
-        // how get sku-code
-        String skucode = orderLineItems.get(0).getSkuCode();
+        List<String> skucodeList = orderLineItems.stream()
+                .map(OrderLineItems::getSkuCode)
+                .collect(toList());
 
-        ManagedChannel managedChannel = ManagedChannelBuilder.forTarget("localhost:8090")
-                .usePlaintext()
-                .build();
-        InventoryServiceGrpc.InventoryServiceBlockingStub stub = InventoryServiceGrpc.newBlockingStub(managedChannel);
+        boolean isInStock = Arrays.stream(inventoryServiceClient.isInStock(skucodeList))
+                .allMatch(InventoryResponse::isInStock);
 
-        // create and inject into request builder sku-code
-        com.stakhovskyi.grpc.Order.InventoryRequest request = com.stakhovskyi.grpc.Order.InventoryRequest
-                .newBuilder().setSkuCode(skucode).build();
-
-        // here we check if order on stock
-        com.stakhovskyi.grpc.Order.InventoryResponse response = stub.isInStock(request);
-        managedChannel.shutdownNow();
-        log.info(" Manager Channel is Shutdown !");
-
-        if (response.getInStock()) {
+        if (isInStock) {
             orderRepository.save(order);
-            log.info(" Save order {} in db ", order.getOrderNumber());
-            return true;
+            log.info(" Place order {} to OrderService db", order.getOrderNumber());
+            return "Order Placed successfully!";
         }
-        return false;
+        throw new RuntimeException("Order not in stock!");
     }
 
     private OrderLineItems mapToOrder(OrderLineItemsDto orderLineItemsDto) {
@@ -71,4 +61,6 @@ public class OrderService {
 
         return orderLineItems;
     }
+
+
 }

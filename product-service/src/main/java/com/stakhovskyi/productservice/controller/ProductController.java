@@ -43,7 +43,6 @@ public class ProductController {
     }
 
 
-
     @PutMapping("/{id}")
     protected ProductDto updateProduct(@RequestBody ProductDto productDto,
                                        @PathVariable("id") String id) {
