@@ -21,8 +21,6 @@ S
 -.idea/sonarlint/securityhotspotstore/index.pb,8\8\88a9255124c95bdc913197c120a8d560edc59c8e
 –
 fproduct-service/src/main/java/com/stakhovskyi/productservice/massageservice/ProductMassageService.java,7\0\7014bc5f06542fcef673b726020dffd741b040ef
-Ž
-^product-service/src/main/java/com/stakhovskyi/productservice/controller/ProductController.java,0\d\0d7e50b5f7c04b4e0755ba7d644bad8a106a88a8
 ˆ
 Xproduct-service/src/main/java/com/stakhovskyi/productservice/service/ProductService.java,6\7\673d9ab201a198304a1fdf919d1e45a98cd0d902
 Š

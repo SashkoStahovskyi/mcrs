@@ -23,8 +23,6 @@ S
 fproduct-service/src/main/java/com/stakhovskyi/productservice/massageservice/ProductMassageService.java,7\0\7014bc5f06542fcef673b726020dffd741b040ef
 ˆ
 Xproduct-service/src/main/java/com/stakhovskyi/productservice/service/ProductService.java,6\7\673d9ab201a198304a1fdf919d1e45a98cd0d902
-Ž
-^product-service/src/main/java/com/stakhovskyi/productservice/controller/ProductController.java,0\d\0d7e50b5f7c04b4e0755ba7d644bad8a106a88a8
 Š
 Zinventory-servic/src/main/java/com/stakhovskyi/inventoryservice/dto/InventoryResponse.java,8\0\80be83b0b0c5e94b41b3ca0850cbd862324b45c7
 
