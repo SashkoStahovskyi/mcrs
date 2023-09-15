@@ -20,7 +20,7 @@ jobs:
                 distribution: 'adopt'
 
             - name: step 3 -> Build Maven Project
-              run: mvn clean install inventory-service
+              run: mvn clean install -pl inventory-service
               
             - name: step 4 -> Check Target Folder
               run: |
