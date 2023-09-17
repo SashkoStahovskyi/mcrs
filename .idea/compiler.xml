@@ -10,6 +10,7 @@
         <module name="product-service" />
         <module name="inventory-servic" />
         <module name="order-service" />
+        <module name="geteway" />
         <module name="discovery-service" />
       </profile>
     </annotationProcessing>
@@ -23,6 +24,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="Discovery-service" options="-parameters" />
       <module name="discovery-service" options="-parameters" />
+      <module name="geteway" options="-parameters" />
       <module name="inventory-servic" options="-parameters" />
       <module name="inventory-service" options="-parameters" />
       <module name="order-service" options="-parameters" />

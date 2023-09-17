@@ -1,8 +1,6 @@
 
 é
 ^product-service/src/main/java/com/stakhovskyi/productservice/repository/ProductRepository.java,2\3\23ad5d101a5615033c350a38d0a322acab0a1840
-ã
-[product-service/src/main/java/com/stakhovskyi/productservice/ProductServiceApplication.java,d\9\d92dc1fd410a94770db360c17237ebd418575041
 Ö
 Uproduct-service/src/main/java/com/stakhovskyi/productservice/utils/ProductMapper.java,7\2\72d61230abdb6022ea9f8752f8c8abe09da0a6d9
 è
@@ -11,8 +9,6 @@ _product-service/src/main/java/com/stakhovskyi/productservice/massageservice/Mas
 \product-service/src/main/java/com/stakhovskyi/productservice/config/KafkaProducerConfig.java,2\5\257d5a7a959a90184573dded1468945b219354a0
 Ñ
 Tproduct-service/src/main/java/com/stakhovskyi/productservice/ivent/ProductEvent.java,f\b\fbbc11beddff3786d2a64ee47c2c0a4da82023fa
-
-Oproduct-service/src/main/java/com/stakhovskyi/productservice/model/Product.java,f\a\fafaa5cc43a939b6531f9cddb303ca858ffbcc2e
 Ä
 Pproduct-service/src/main/java/com/stakhovskyi/productservice/dto/ProductDto.java,f\e\fe5bdd6c3898b11822d02c3819603fffda7a3f92
 S
@@ -45,3 +41,17 @@ Jorder-service/src/main/java/com/example/orderservice/dto/OrderRequest.java,d\3
 ]inventory-servic/src/main/java/com/stakhovskyi/inventoryservice/service/InventoryService.java,d\3\d38aea81ab5db1ba5ca7c5d8eabd010a539f8978
 É
 Sinventory-servic/src/main/java/com/stakhovskyi/inventoryservice/entity/Product.java,9\4\9456d304491eb5a18b3c2596b9023460b7a5b3dd
+é
+^product-service/src/main/java/com/stakhovskyi/productservice/controller/ProductController.java,0\d\0d7e50b5f7c04b4e0755ba7d644bad8a106a88a8
+7
+pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
+?
+geteway/pom.xml,9\d\9dde3f1bba98833a1ec468be2c6152c2c5ad946e
+E
+order-service/pom.xml,d\3\d3bf53ecc442740843266a635cbfe9807b992566
+è
+_discovery-service/src/main/java/com/stakhovskiy/discoveryserver/DiscoveryServerApplication.java,b\5\b5a42654516da82a0f6506414a91e8c9f42a59e7
+t
+Dgeteway/src/main/java/com/stahovskyi/gateway/GatewayApplication.java,b\2\b25c8ec4155af5c16d352747f1a2c3b5a0e3dbdf
+I
+discovery-service/pom.xml,7\e\7e2a93dc15928a8ab4dff670d6d413b0a1b7e7b7

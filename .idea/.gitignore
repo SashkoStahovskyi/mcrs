@@ -7,6 +7,9 @@
 /dataSources/
 /dataSources.local.xml
 # Sonar ignore files
-.idea/sonarlint
+.idea/sonarlint/issuestore/
+ .idea/sonarlint/securityhotspotstore/
 #VS Code ignore
 .vscode/
+# .idea ignore
+.idea/
